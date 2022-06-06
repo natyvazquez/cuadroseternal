@@ -1,0 +1,354 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*Aca tengo un problema con el fondo en degradee que se ve del lado izquierdo un par de pixeles mas sobresalinedo del 
+contenido y no se como eliminarselo*/
+body{
+    width: 100%;
+    background-image: linear-gradient(315deg, #7ed6df 0%, #000000 90%);
+
+}
+
+h1{
+    color:#d6d0d0;
+    font-family: 'Amatic SC', Bold;
+    font-size: 25px;
+    text-align: center;
+    margin: 25px;
+    padding: 25px;
+}
+h2{
+    color:#dfd1d1;
+    font-family: 'Amatic SC', Bold;
+    font-size: 16px;
+    text-align: center;
+    margin: 25px;
+    padding: 25px;
+    
+}
+
+h3{
+    color:#c7c7c7;
+    font-family: 'Amatic SC', Bold;
+    font-size: 18px;
+    text-align: left;
+}
+p{
+    color: rgb(255, 255, 255);
+    font-family: 'Arya', sans-serif;
+    font-size: 14px;
+    margin: 25px;
+    padding: 25px;
+    text-align: center;
+    overflow: auto;
+    width: 95%
+}
+/*Aca coloque un DIV con el class contenedor porque si no entendi mal tengo que establecer la etiqueta padre que va a indicar
+como va a ser el layout para toda la pagina, por lo que tiene que abarcar todos las secciones de la pagina header, main, footer, asides, etc
+que despues es la que tengo que utilizar para hacer el media query*/
+.contenedor{
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 5fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "Peliculas Juegos Anime"
+    "footer footer footer";
+}
+.logo{ /*Aca en header en la parte del logo no entiendo porque me queda tanto aire arriba y abajo del logo, 
+    quisiera que que la barra de nav estuviese mas cerca del logo,  el llogo mas cerca del top de la pagina*/
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    grid-area: header;
+    position: relative;
+    top:  10px;
+    bottom: 10px;
+
+}
+
+.menu{
+    width: 100%;
+    padding: 1rem;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    grid-area: nav;
+
+}
+/*etiqueta padre de la barra de navegacion, intente aplicar flexbox, elimine el display:inline-block 
+para los hijos, le pongo un widht: 50% a la caja contenedora, pero siento que estoy poniendo codigo de mas
+o que esta  mal ordenando*/
+.menu ul{
+    color: rgb(31, 31, 31);
+    background-color:rgb(209, 201, 190);
+    margin: 5%;
+    padding:1%;
+    font-family: 'Amatic SC', bold;
+    font-size: 30px;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;       
+    justify-content:center;
+    width: 50%;
+    grid-area: nav;
+
+    
+}
+.menu li{
+    margin: auto;
+    padding:10px;
+}
+.menu li a{
+    text-decoration: none;
+    color:rgb(121, 114, 114)
+    
+    
+}
+.menu li a:hover{
+    color: black;
+}
+
+.menu li:hover{
+    background-color: cadetblue;
+}
+
+
+.categoria{
+    display: block;
+    position: relative;
+}
+.categoria:hover{
+    color:#386166
+}
+
+.logo {
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px;
+}
+.galeria{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    grid-area: main;
+    animation-duration: 2s;
+    animation-name:aparecer;
+    animation-iteration-count: infinite;
+    }
+ @keyframes aparecer{
+     0%{opacity: 0;}
+ }   
+    100%{opacity:1;}
+
+    
+.destacados{
+    color: rgb(31, 35, 37);
+    background-color:rgb(209, 201, 190);
+    font-family: 'Amatic SC', bold;
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;
+    padding: 1rem;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    grid-area: peliculas juegos anime;
+
+}
+.liveAction{
+    padding: 2px;
+    margin: 1rem;
+    width: 33%;
+    height: 500px;
+    border-radius: 4px;
+    border: 1px solid #386166;
+    background-color:rgb(209, 201, 190);
+    grid-area: peliculas;
+    overflow: hidden; /*Aca queria que las imagenes estuvieran contenidas dentro de la caja pero no lo logre, 
+    asi que le coloque el overflow pero no es exactamente lo que queria*/
+}
+
+.juegos{
+    padding: 2px;
+    margin: 1rem;
+    width: 33%;
+    height: 500px;
+    grid-area: juegos;
+    border-radius: 4px;
+    border: 1px solid #386166;
+    background-color:rgb(209, 201, 190);
+    overflow: hidden;
+}
+
+.anime{
+    padding: 2px;
+    margin: 1rem;
+    width: 33%;
+    height: 500px;
+    grid-area: anime;
+    border-radius: 2px;
+    border: 1px solid #386166;
+    background-color:rgb(209, 201, 190);
+    overflow: hidden;
+}
+
+.destacados li{
+    margin: auto;
+    padding:10px;
+
+}
+.destacados li a{
+    text-decoration: none;
+    color:rgb(121, 114, 114);
+
+}
+.destacados li a:hover{
+    color: black;
+}
+
+.destacados li:hover{
+    background-color: cadetblue;
+    
+}
+
+.minorista .tienda{
+    font-family: roboto mono;
+    font-weight: bold;
+    text-align: left;
+    font-size: 20px;
+}
+
+
+
+.redesSociales{
+    margin: 0;
+    list-style-type: none;
+    width: 100%;
+    padding-right: 2rem;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:right;
+    grid-area:footer;
+    
+
+}
+
+footer .redesSociales a{
+    color:#1e737e;
+    margin-left: 1.2rem;
+    width: 30px;
+    }
+
+
+.redesSociales .redes:hover{
+    transform:scaleX(70%)
+}
+
+.minorista a{
+    text-decoration: none;
+    color:rgb(255, 255, 255)
+
+}
+/*
+.minorista a:hover{
+    filter: blur(5px);
+}*/
+
+footer{
+    margin: 1px;
+    opacity: .7;
+    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+    color: #1e737e;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    grid-area: footer;
+
+}
+
+
+
+form{
+    text-align: left;
+    margin: 1px;
+    padding: 1% 1% 35% 35%;    
+    color: rgb(255, 255, 255);
+    font-family: 'Amatic SC', bold;
+    font-size: 18px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+/*Estilos para el main del HTML Peliculas*/
+
+
+.galeriaPeliculas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.postersPeliculas{
+    width: 250px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.postersPeliculas:hover{
+    filter: blur(5px);
+
+}
+
+/*no logre que se hiciera responsive, se apiña todo*/
+@media screen and (max-width: 700px){
+    .contenedor{
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 2fr 1fr 5fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "main main"
+        "footer footer";
+    }
+    .menu {
+        color: rgb(214, 214, 214);
+        background-color: transparent;}
+}
+
+
+@media screen and (max-width: 400px){
+    .contenedor{
+        grid-template-columns: 2fr;
+        grid-template-rows: 2fr 1fr 5fr 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    }
+    .menu {
+        color: rgb(214, 214, 214);
+    background-color: transparent;}
+
+}
+
