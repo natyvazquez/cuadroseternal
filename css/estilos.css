@@ -8,25 +8,25 @@
 contenido y no se como eliminarselo*/
 body{
     width: 100%;
-    background-image: linear-gradient(315deg, #7ed6df 0%, #000000 90%);
+    background-image: linear-gradient(-500deg, #7ed6df 0%, #000000 90%);
 
 }
 
 h1{
-    color:#d6d0d0;
+    color:#161515;
     font-family: 'Amatic SC', Bold;
-    font-size: 25px;
+    font-size: 40px;
     text-align: center;
-    margin: 25px;
-    padding: 25px;
+    margin: 5px;
+    padding: 5px;
 }
 h2{
-    color:#dfd1d1;
-    font-family: 'Amatic SC', Bold;
-    font-size: 16px;
-    text-align: center;
-    margin: 25px;
-    padding: 25px;
+    color:#b1b1b1;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    margin: 5px;
+    padding: 5px;
     
 }
 
@@ -37,21 +37,21 @@ h3{
     text-align: left;
 }
 p{
-    color: rgb(255, 255, 255);
+    color: rgb(104, 104, 104);
     font-family: 'Arya', sans-serif;
     font-size: 14px;
-    margin: 25px;
-    padding: 25px;
+    margin: 5px;
+    padding: 5px;
     text-align: center;
     overflow: auto;
-    width: 95%
+    width: 100%
 }
 /*Aca coloque un DIV con el class contenedor porque si no entendi mal tengo que establecer la etiqueta padre que va a indicar
 como va a ser el layout para toda la pagina, por lo que tiene que abarcar todos las secciones de la pagina header, main, footer, asides, etc
 que despues es la que tengo que utilizar para hacer el media query*/
 .contenedor{
     margin: auto;
-    width: 90%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2fr 1fr 5fr 2fr 1fr;
@@ -62,6 +62,8 @@ que despues es la que tengo que utilizar para hacer el media query*/
     "Peliculas Juegos Anime"
     "footer footer footer";
 }
+
+
 .logo{ /*Aca en header en la parte del logo no entiendo porque me queda tanto aire arriba y abajo del logo, 
     quisiera que que la barra de nav estuviese mas cerca del logo,  el llogo mas cerca del top de la pagina*/
     width: 100%;
@@ -144,15 +146,13 @@ o que esta  mal ordenando*/
     flex-wrap: nowrap;
     justify-content: center;
     grid-area: main;
-    animation-duration: 2s;
-    animation-name:aparecer;
-    animation-iteration-count: infinite;
-    }
+}
+
  @keyframes aparecer{
      0%{opacity: 0;}
- }   
-    100%{opacity:1;}
-
+   
+    100% {opacity:1;}
+ }
     
 .destacados{
     color: rgb(31, 35, 37);
@@ -171,7 +171,7 @@ o que esta  mal ordenando*/
     grid-area: peliculas juegos anime;
 
 }
-.liveAction{
+/*.liveAction{
     padding: 2px;
     margin: 1rem;
     width: 33%;
@@ -181,7 +181,7 @@ o que esta  mal ordenando*/
     background-color:rgb(209, 201, 190);
     grid-area: peliculas;
     overflow: hidden; /*Aca queria que las imagenes estuvieran contenidas dentro de la caja pero no lo logre, 
-    asi que le coloque el overflow pero no es exactamente lo que queria*/
+    asi que le coloque el overflow pero no es exactamente lo que queria
 }
 
 .juegos{
@@ -206,9 +206,9 @@ o que esta  mal ordenando*/
     border: 1px solid #386166;
     background-color:rgb(209, 201, 190);
     overflow: hidden;
-}
+}*/
 
-.destacados li{
+/*.destacados li{
     margin: auto;
     padding:10px;
 
@@ -226,7 +226,7 @@ o que esta  mal ordenando*/
     background-color: cadetblue;
     
 }
-
+*/
 .minorista .tienda{
     font-family: roboto mono;
     font-weight: bold;
@@ -274,7 +274,7 @@ footer .redesSociales a{
 footer{
     margin: 1px;
     opacity: .7;
-    padding: 0.5rem;
+    padding: 20px;
     width: 100%;
     height: 100%;
     color: #1e737e;
