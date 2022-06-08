@@ -8,8 +8,8 @@
 contenido y no se como eliminarselo*/
 body{
     width: 100%;
-    background-image: linear-gradient(-500deg, #7ed6df 0%, #000000 90%);
-
+    background-color: #d9d9d9;
+    background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
 }
 
 h1{
@@ -21,7 +21,7 @@ h1{
     padding: 5px;
 }
 h2{
-    color:#b1b1b1;
+    color:#3b3a3a;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
     text-align: justify;
@@ -31,13 +31,13 @@ h2{
 }
 
 h3{
-    color:#c7c7c7;
+    color:#696767;
     font-family: 'Amatic SC', Bold;
     font-size: 18px;
     text-align: left;
 }
 p{
-    color: rgb(104, 104, 104);
+    color: rgb(10, 10, 10);
     font-family: 'Arya', sans-serif;
     font-size: 14px;
     margin: 5px;
@@ -50,13 +50,12 @@ p{
 como va a ser el layout para toda la pagina, por lo que tiene que abarcar todos las secciones de la pagina header, main, footer, asides, etc
 que despues es la que tengo que utilizar para hacer el media query*/
 .contenedor{
-    margin: auto;
+    margin: 0px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 5fr 2fr 1fr;
+    grid-template-rows: 2fr 5fr 2fr 1fr;
     grid-template-areas: 
-    "header header header"
     "nav nav nav"
     "main main main"
     "Peliculas Juegos Anime"
@@ -64,19 +63,8 @@ que despues es la que tengo que utilizar para hacer el media query*/
 }
 
 
-.logo{ /*Aca en header en la parte del logo no entiendo porque me queda tanto aire arriba y abajo del logo, 
-    quisiera que que la barra de nav estuviese mas cerca del logo,  el llogo mas cerca del top de la pagina*/
-    width: 100%;
-    display:flex;
-    justify-content: center;
-    grid-area: header;
-    position: relative;
-    top:  10px;
-    bottom: 10px;
 
-}
-
-.menu{
+.navbar-nav{
     width: 100%;
     padding: 1rem;
     display:flex;
@@ -89,40 +77,20 @@ que despues es la que tengo que utilizar para hacer el media query*/
 /*etiqueta padre de la barra de navegacion, intente aplicar flexbox, elimine el display:inline-block 
 para los hijos, le pongo un widht: 50% a la caja contenedora, pero siento que estoy poniendo codigo de mas
 o que esta  mal ordenando*/
-.menu ul{
-    color: rgb(31, 31, 31);
-    background-color:rgb(209, 201, 190);
-    margin: 5%;
-    padding:1%;
-    font-family: 'Amatic SC', bold;
-    font-size: 30px;
-    margin: 0;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;       
-    justify-content:center;
-    width: 50%;
-    grid-area: nav;
 
-    
+.navbar-nav{
+    margin-left: 0px;
+    padding: 5px;
+    text-align: left;
 }
-.menu li{
-    margin: auto;
-    padding:10px;
-}
-.menu li a{
+.navbar-nav a{
     text-decoration: none;
-    color:rgb(121, 114, 114)
+    color:rgb(5, 148, 148)
     
     
 }
-.menu li a:hover{
-    color: black;
-}
-
-.menu li:hover{
-    background-color: cadetblue;
+.navbar-nav a:hover{
+    color: rgb(61, 96, 97);
 }
 
 
@@ -134,11 +102,7 @@ o que esta  mal ordenando*/
     color:#386166
 }
 
-.logo {
-    border-radius: 15px;
-    margin: 5px;
-    padding: 5px;
-}
+
 .galeria{
     width: 100%;
     display:flex;
@@ -148,12 +112,6 @@ o que esta  mal ordenando*/
     grid-area: main;
 }
 
- @keyframes aparecer{
-     0%{opacity: 0;}
-   
-    100% {opacity:1;}
- }
-    
 .destacados{
     color: rgb(31, 35, 37);
     background-color:rgb(209, 201, 190);
@@ -234,13 +192,23 @@ o que esta  mal ordenando*/
     font-size: 20px;
 }
 
+.ventaMayorista {
+
+    padding-top: 5rem;
+}
+
+
+.quienesSomos {
+
+    padding-top: 5rem;
+}
 
 
 .redesSociales{
     margin: 0;
     list-style-type: none;
-    width: 100%;
-    padding-right: 2rem;
+    width: 80%;
+    padding-right: 20px;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -251,36 +219,35 @@ o que esta  mal ordenando*/
 }
 
 footer .redesSociales a{
-    color:#1e737e;
-    margin-left: 1.2rem;
-    width: 30px;
+    margin-left: 0.5rem;
+    width: 25px;
     }
 
 
 .redesSociales .redes:hover{
-    transform:scaleX(70%)
+    transform: scaleX(70%)
 }
 
 .minorista a{
     text-decoration: none;
-    color:rgb(255, 255, 255)
+    color:rgb(24, 24, 24)
 
 }
-/*
+
 .minorista a:hover{
-    filter: blur(5px);
-}*/
+    color: cadetblue;
+    transform: scaleY(70%)
+}
 
 footer{
     margin: 1px;
     opacity: .7;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     height: 100%;
-    color: #1e737e;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     grid-area: footer;
 
 }
@@ -291,9 +258,9 @@ form{
     text-align: left;
     margin: 1px;
     padding: 1% 1% 35% 35%;    
-    color: rgb(255, 255, 255);
+    color: rgb(31, 30, 30);
     font-family: 'Amatic SC', bold;
-    font-size: 18px;
+    font-size: 25px;
     list-style-type: none;
     display: inline-block;
 }
@@ -311,6 +278,8 @@ form{
 .postersPeliculas{
     width: 250px;
     height: 400px;
+    padding: auto;
+    margin: 10px;
     overflow: hidden;
 }
 
@@ -319,7 +288,7 @@ form{
 
 }
 
-/*no logre que se hiciera responsive, se apiña todo*/
+
 @media screen and (max-width: 700px){
     .contenedor{
         grid-template-columns: 2fr 2fr;
