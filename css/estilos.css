@@ -71,25 +71,25 @@ footer {
   grid-area: footer;
 }
 
-footer .minorista a {
-  text-decoration: none;
-  color: #181818;
-}
-
-footer .minorista a:hover {
-  color: cadetblue;
-  -webkit-transform: scaleY(70%);
-          transform: scaleY(70%);
-}
-
-footer .minorista a:hover .tienda {
+footer .minorista .tienda {
   font-family: roboto mono;
   font-weight: bold;
   text-align: left;
   font-size: 20px;
 }
 
-footer .minorista a:hover .tienda .redesSociales {
+footer .minorista .tienda a {
+  text-decoration: none;
+  color: #181818;
+}
+
+footer .minorista .tienda a:hover {
+  color: cadetblue;
+  -webkit-filter: drop-shadow(0 0 0.75rem crimson);
+          filter: drop-shadow(0 0 0.75rem crimson);
+}
+
+footer .redesSociales {
   margin: 0;
   list-style-type: none;
   width: 80%;
@@ -109,12 +109,12 @@ footer .minorista a:hover .tienda .redesSociales {
   grid-area: footer;
 }
 
-footer .minorista a:hover .tienda .redesSociales .redes a {
+footer .redesSociales .redes a {
   margin-left: 0.5rem;
-  width: 25px;
+  width: 15px;
 }
 
-footer .minorista a:hover .tienda .redesSociales .redes a:hover {
+footer .redesSociales .redes a:hover {
   -webkit-transform: scaleX(70%);
           transform: scaleX(70%);
 }
@@ -248,21 +248,4 @@ form {
   .menu {
       color: rgb(214, 214, 214);
       background-color: transparent;}
-}
-
-
-@media screen and (max-width: 576px){
-  .contenedor{
-      grid-template-columns: 2fr;
-      grid-template-rows: 1fr2fr 3fr 1fr;
-      grid-template-areas: 
-      "container container"
-      "navbar navbar"
-      "galeria galeria"
-      "footer footer";
-  }
-  .menu {
-      color: rgb(214, 214, 214);
-  background-color: transparent;}
-
 }
