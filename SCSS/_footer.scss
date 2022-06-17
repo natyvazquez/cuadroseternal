@@ -39,10 +39,10 @@ footer{
                 a{
                 margin-left: 0.5rem;
                 width: 15px;
-                &:hover{
-                    transform: scaleX(70%)
-            }
+                }
         }
 }
 }
-}
+.redesSociales .redes:hover{
+    transform: scaleX(70%)
+  }

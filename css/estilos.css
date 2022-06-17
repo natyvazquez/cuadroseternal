@@ -1,3 +1,4 @@
+
 .container .navbar-nav {
   width: 100%;
   padding: 1rem;
@@ -114,9 +115,8 @@ footer .redesSociales .redes a {
   width: 15px;
 }
 
-footer .redesSociales .redes a:hover {
-  -webkit-transform: scaleX(70%);
-          transform: scaleX(70%);
+.redesSociales .redes:hover{
+  transform: scaleX(70%)
 }
 
 h1 {
@@ -154,6 +154,7 @@ p {
   overflow: auto;
   width: 100%;
 }
+
 
 * {
   margin: 0;
@@ -234,6 +235,7 @@ form {
 .quienesSomos {
   padding-top: 5rem;
 }
+
 @media screen and (max-width: 768px){
   .contenedor{
       grid-template-columns: 2fr 2fr;
