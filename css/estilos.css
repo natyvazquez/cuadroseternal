@@ -72,10 +72,10 @@ footer {
 }
 
 footer .minorista .tienda {
-  font-family: roboto mono;
+  font-family: amatic;
   font-weight: bold;
-  text-align: left;
-  font-size: 20px;
+  text-align: center;
+  font-size: 10px;
 }
 
 footer .minorista .tienda a {
@@ -84,16 +84,16 @@ footer .minorista .tienda a {
 }
 
 footer .minorista .tienda a:hover {
-  color: cadetblue;
-  -webkit-filter: drop-shadow(0 0 0.75rem crimson);
-          filter: drop-shadow(0 0 0.75rem crimson);
+  color: #363b3b;
+  -webkit-filter: drop-shadow(0 0 0.75rem #5c5a5a);
+          filter: drop-shadow(0 0 0.75rem #5c5a5a);
 }
 
 footer .redesSociales {
   margin: 0;
   list-style-type: none;
   width: 80%;
-  padding-right: 20px;
+  padding-right: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,17 +101,20 @@ footer .redesSociales {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   grid-area: footer;
 }
 
 footer .redesSociales .redes a {
-  margin-left: 0.5rem;
-  width: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .redesSociales .redes:hover {

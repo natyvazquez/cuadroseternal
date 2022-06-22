@@ -10,16 +10,16 @@ footer{
     grid-area: footer;
         .minorista{
             .tienda{
-                font-family: roboto mono;
+                font-family: amatic;
                 font-weight: bold;
-                text-align: left;
-                font-size: 20px;
+                text-align: center;
+                font-size: 10px;
                 a{
                     text-decoration: none;
                     color:rgb(24, 24, 24);
                     &:hover{
-                        color: cadetblue;
-                        filter: drop-shadow(0 0 0.75rem crimson);
+                        color: rgb(54, 59, 59);
+                        filter: drop-shadow(0 0 0.75rem rgb(92, 90, 90));
 
         } 
     }
@@ -29,16 +29,16 @@ footer{
         margin: 0;
         list-style-type: none;
         width: 80%;
-        padding-right: 20px;
+        padding-right: 1px;
         display:flex;
         flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content:right;
+        flex-wrap: wrap;
+        justify-content:center;
         grid-area:footer;
             .redes{
                 a{
-                margin-left: 0.5rem;
-                width: 15px;
+                    flex-wrap: wrap;
+                    justify-content:center;
                 }
         }
 }
